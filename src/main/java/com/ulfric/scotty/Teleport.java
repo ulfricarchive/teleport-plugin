@@ -10,7 +10,6 @@ import com.ulfric.data.config.Settings;
 import com.ulfric.palpatine.Scheduler;
 import com.ulfric.palpatine.Task;
 import com.ulfric.palpatine.time.Tick;
-import com.ulfric.servix.Service;
 import com.ulfric.servix.services.teleport.TeleportPendingEvent;
 import com.ulfric.servix.services.teleport.TeleportService;
 
@@ -29,7 +28,7 @@ public class Teleport implements TeleportService { // TODO thread safety
 	private TeleportSettings settings;
 
 	@Override
-	public Class<? extends Service> getService() {
+	public Class<TeleportService> getService() {
 		return TeleportService.class;
 	}
 
