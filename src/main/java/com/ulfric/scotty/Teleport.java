@@ -3,10 +3,10 @@ package com.ulfric.scotty;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import com.ulfric.data.config.Configured;
 import com.ulfric.data.config.Settings;
+import com.ulfric.dragoon.extension.inject.Inject;
 import com.ulfric.palpatine.Scheduler;
 import com.ulfric.palpatine.Task;
 import com.ulfric.palpatine.time.Tick;
@@ -22,7 +22,9 @@ import java.util.UUID;
 public class Teleport implements TeleportService { // TODO thread safety
 
 	private final Map<UUID, Task> tasks = new HashMap<>();
-	private final Scheduler scheduler = new Scheduler(JavaPlugin.getPlugin(Scotty.class)); // TODO inject
+
+	@Inject
+	private Scheduler scheduler;
 
 	@Settings
 	private TeleportSettings settings;
