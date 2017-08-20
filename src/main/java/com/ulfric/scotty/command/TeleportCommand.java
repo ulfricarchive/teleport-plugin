@@ -9,10 +9,8 @@ import com.ulfric.andrew.Permission;
 import com.ulfric.andrew.Sync;
 import com.ulfric.andrew.argument.Argument;
 import com.ulfric.commons.naming.Name;
+import com.ulfric.i18n.content.Details;
 import com.ulfric.servix.services.teleport.TeleportService;
-
-import java.util.Collections;
-import java.util.Map;
 
 @Sync
 @Name("teleport")
@@ -35,8 +33,8 @@ public class TeleportCommand implements Command {
 		context.getSender().sendMessage("scotty-teleport-to", details());
 	}
 
-	protected Map<String, String> details() {
-		return Collections.singletonMap("target", target.getName());
+	protected Details details() {
+		return Details.of("target", target.getName());
 	}
 
 }
