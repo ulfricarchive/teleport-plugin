@@ -10,6 +10,7 @@ import com.ulfric.andrew.Sync;
 import com.ulfric.andrew.argument.Argument;
 import com.ulfric.commons.naming.Name;
 import com.ulfric.i18n.content.Details;
+import com.ulfric.servix.services.locale.TellService;
 import com.ulfric.servix.services.teleport.TeleportService;
 
 @Sync
@@ -23,18 +24,18 @@ public class TeleportCommand implements Command {
 
 	@Override
 	public void run(Context context) {
-		Player player = (Player) context.getSender().handle();
+		Player player = (Player) context.getSender();
 		TeleportService service = TeleportService.get();
 		if (service == null) {
 			// TODO fail message
 			return;
 		}
 		service.teleport(player, target.getLocation());
-		context.getSender().sendMessage("scotty-teleport-to", details());
+		TellService.sendMessage(player, "scotty-teleport-to", details());
 	}
 
 	protected Details details() {
-		return Details.of("target", target.getName());
+		return Details.of("target", target);
 	}
 
 }
