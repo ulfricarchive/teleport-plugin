@@ -13,19 +13,14 @@ import com.ulfric.servix.services.teleport.TeleportService;
 @Sync
 @Name("here")
 @Alias("h")
-@Permission("scotty.teleport.here")
+@Permission("teleport.here")
 public class TeleportHereCommand extends TeleportCommand {
 
 	@Override
 	public void run(Context context) {
 		Player player = (Player) context.getSender();
-		TeleportService service = TeleportService.get();
-		if (service == null) {
-			// TODO fail message
-			return;
-		}
-		service.teleport(target, player.getLocation());
-		TellService.sendMessage(player, "scotty-teleport-here", details()); // TODO add delay to details
+		TeleportService.get().teleport(target, player.getLocation());
+		TellService.sendMessage(player, "teleport-here", details()); // TODO add delay to details
 	}
 
 }

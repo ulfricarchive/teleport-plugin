@@ -16,7 +16,7 @@ import com.ulfric.servix.services.teleport.TeleportService;
 @Sync
 @Name("teleport")
 @Alias({"tp", "tele"})
-@Permission("scotty.teleport")
+@Permission("teleport.to")
 public class TeleportCommand implements Command {
 
 	@Argument
@@ -25,13 +25,8 @@ public class TeleportCommand implements Command {
 	@Override
 	public void run(Context context) {
 		Player player = (Player) context.getSender();
-		TeleportService service = TeleportService.get();
-		if (service == null) {
-			// TODO fail message
-			return;
-		}
-		service.teleport(player, target.getLocation());
-		TellService.sendMessage(player, "scotty-teleport-to", details());
+		TeleportService.get().teleport(target, player.getLocation());
+		TellService.sendMessage(player, "teleport-to", details());
 	}
 
 	protected Details details() {
