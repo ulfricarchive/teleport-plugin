@@ -1,14 +1,14 @@
-package com.ulfric.scotty.command;
+package com.ulfric.plugin.teleport.command;
 
 import org.bukkit.entity.Player;
 
-import com.ulfric.andrew.Alias;
-import com.ulfric.andrew.Context;
-import com.ulfric.andrew.Permission;
-import com.ulfric.andrew.Sync;
 import com.ulfric.commons.naming.Name;
-import com.ulfric.servix.services.locale.TellService;
-import com.ulfric.servix.services.teleport.TeleportService;
+import com.ulfric.plugin.commands.Alias;
+import com.ulfric.plugin.commands.Context;
+import com.ulfric.plugin.commands.Permission;
+import com.ulfric.plugin.commands.Sync;
+import com.ulfric.plugin.locale.TellService;
+import com.ulfric.plugin.teleport.TeleportService;
 
 @Sync
 @Name("now")

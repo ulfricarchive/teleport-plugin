@@ -1,4 +1,4 @@
-package com.ulfric.scotty;
+package com.ulfric.plugin.teleport;
 
 import com.ulfric.commons.value.Bean;
 

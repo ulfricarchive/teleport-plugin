@@ -1,2 +1,2 @@
-# scotty
-Implementation Servix's TeleportService
+# teleport-plugin
+Minecraft teleport plugin

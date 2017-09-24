@@ -1,24 +1,20 @@
-package com.ulfric.scotty;
+package com.ulfric.plugin.teleport;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 
-import com.ulfric.data.config.Configured;
-import com.ulfric.data.config.Settings;
+import com.ulfric.dragoon.conf4j.Settings;
 import com.ulfric.dragoon.extension.inject.Inject;
-import com.ulfric.palpatine.Scheduler;
-import com.ulfric.palpatine.Task;
-import com.ulfric.palpatine.time.Tick;
-import com.ulfric.servix.services.teleport.TeleportPendingEvent;
-import com.ulfric.servix.services.teleport.TeleportService;
+import com.ulfric.plugin.tasks.Scheduler;
+import com.ulfric.plugin.tasks.Task;
+import com.ulfric.plugin.tasks.time.Tick;
 
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-@Configured
 public class Teleport implements TeleportService { // TODO thread safety
 
 	private final Map<UUID, Task> tasks = new HashMap<>();
