@@ -1,6 +1,6 @@
 name: Teleport
 main: com.ulfric.plugin.teleport.TeleportPlugin
 version: 1.0.0
-author: Ulfric Projects
+author: Ulfric LLC
 load: STARTUP
-depend: [Platform, Services, Locale, Tasks, Commands]
+depend: [Services, Locale, Tasks, Commands]
