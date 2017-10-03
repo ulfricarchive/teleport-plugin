@@ -19,42 +19,42 @@
 			<groupId>com.ulfric.commons</groupId>
 			<artifactId>commons</artifactId>
 			<version>1.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>com.ulfric.i18n</groupId>
-			<artifactId>i18n</artifactId>
+			<groupId>com.ulfric.plugin</groupId>
+			<artifactId>data-plugin</artifactId>
 			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.ulfric.dragoon</groupId>
-			<artifactId>conf4j-dragoon</artifactId>
-			<version>1.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.ulfric.plugin</groupId>
 			<artifactId>services-plugin</artifactId>
 			<version>1.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.ulfric.plugin</groupId>
 			<artifactId>commands-plugin</artifactId>
 			<version>1.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.ulfric.plugin</groupId>
 			<artifactId>tasks-plugin</artifactId>
 			<version>1.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.ulfric.plugin</groupId>
 			<artifactId>locale-plugin</artifactId>
 			<version>1.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 

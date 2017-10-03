@@ -22,8 +22,8 @@ public class Teleport implements TeleportService { // TODO thread safety
 	@Inject
 	private Scheduler scheduler;
 
-	@Settings
-	private TeleportSettings settings;
+	@Settings("teleport")
+	private TeleportConfig settings;
 
 	@Override
 	public Class<TeleportService> getService() {
@@ -32,10 +32,9 @@ public class Teleport implements TeleportService { // TODO thread safety
 
 	@Override
 	public Task teleport(Entity entity, Location location) {
-		Long tickDelayPossiblyNull = settings.getTickDelay();
-		long tickDelay = tickDelayPossiblyNull == null ? 0 : tickDelayPossiblyNull;
+		long tickDelay = settings.tickDelay();
 
-		Duration when = tickDelayPossiblyNull > 0 ? Duration.of(tickDelay, Tick.INSTANCE) : Duration.ZERO;
+		Duration when = tickDelay > 0 ? Duration.of(tickDelay, Tick.INSTANCE) : Duration.ZERO;
 
 		return teleport(entity, location, when);
 	}
