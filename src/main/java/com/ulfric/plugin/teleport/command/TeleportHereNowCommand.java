@@ -6,11 +6,9 @@ import com.ulfric.commons.naming.Name;
 import com.ulfric.plugin.commands.Alias;
 import com.ulfric.plugin.commands.Context;
 import com.ulfric.plugin.commands.Permission;
-import com.ulfric.plugin.commands.Sync;
 import com.ulfric.plugin.locale.TellService;
 import com.ulfric.plugin.teleport.TeleportService;
 
-@Sync
 @Name("now")
 @Alias("force")
 @Permission("teleport.here.now")

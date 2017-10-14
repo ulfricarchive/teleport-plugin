@@ -2,18 +2,16 @@ package com.ulfric.plugin.teleport.command;
 
 import org.bukkit.entity.Player;
 
+import com.ulfric.commons.naming.Name;
+import com.ulfric.i18n.content.Details;
 import com.ulfric.plugin.commands.Alias;
 import com.ulfric.plugin.commands.Command;
 import com.ulfric.plugin.commands.Context;
 import com.ulfric.plugin.commands.Permission;
-import com.ulfric.plugin.commands.Sync;
 import com.ulfric.plugin.commands.argument.Argument;
-import com.ulfric.commons.naming.Name;
-import com.ulfric.i18n.content.Details;
 import com.ulfric.plugin.locale.TellService;
 import com.ulfric.plugin.teleport.TeleportService;
 
-@Sync
 @Name("teleport")
 @Alias({"tp", "tele"})
 @Permission("teleport.to")
