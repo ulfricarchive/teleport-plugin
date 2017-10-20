@@ -1,12 +1,8 @@
 package com.ulfric.plugin.teleport.command;
 
-import org.bukkit.entity.Player;
-
 import com.ulfric.commons.naming.Name;
 import com.ulfric.plugin.commands.Alias;
-import com.ulfric.plugin.commands.Context;
 import com.ulfric.plugin.commands.Permission;
-import com.ulfric.plugin.locale.TellService;
 import com.ulfric.plugin.teleport.TeleportService;
 
 @Name("now")
@@ -15,10 +11,9 @@ import com.ulfric.plugin.teleport.TeleportService;
 public class TeleportHereNowCommand extends TeleportHereCommand {
 
 	@Override
-	public void run(Context context) {
-		Player player = (Player) context.getSender();
-		TeleportService.get().teleport(target, player.getLocation()).run();
-		TellService.sendMessage(player, "teleport-here-now", details()); // TODO add delay to details
+	public void run() {
+		TeleportService.get().teleport(target, player().getLocation()).run();
+		tell("teleport-here-now");
 	}
 
 }
