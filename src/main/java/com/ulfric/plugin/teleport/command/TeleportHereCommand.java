@@ -2,7 +2,7 @@ package com.ulfric.plugin.teleport.command;
 
 import com.ulfric.commons.naming.Name;
 import com.ulfric.plugin.commands.Alias;
-import com.ulfric.plugin.commands.Permission;
+import com.ulfric.plugin.commands.permissions.Permission;
 import com.ulfric.plugin.teleport.TeleportService;
 
 @Name("here")

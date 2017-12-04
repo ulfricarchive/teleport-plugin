@@ -5,8 +5,8 @@ import org.bukkit.entity.Player;
 import com.ulfric.commons.naming.Name;
 import com.ulfric.plugin.commands.Alias;
 import com.ulfric.plugin.commands.Command;
-import com.ulfric.plugin.commands.Permission;
 import com.ulfric.plugin.commands.argument.Argument;
+import com.ulfric.plugin.commands.permissions.Permission;
 import com.ulfric.plugin.teleport.TeleportService;
 
 @Name("teleport")
