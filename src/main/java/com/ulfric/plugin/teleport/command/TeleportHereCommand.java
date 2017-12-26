@@ -7,7 +7,7 @@ import com.ulfric.plugin.teleport.TeleportService;
 
 @Name("here")
 @Alias("h")
-@Permission("teleport.here")
+@Permission("teleport-here")
 public class TeleportHereCommand extends TeleportCommand {
 
 	@Override

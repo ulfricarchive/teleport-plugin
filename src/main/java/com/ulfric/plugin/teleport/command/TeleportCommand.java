@@ -11,7 +11,7 @@ import com.ulfric.plugin.teleport.TeleportService;
 
 @Name("teleport")
 @Alias({"tp", "tele"})
-@Permission("teleport.to")
+@Permission("teleport-to")
 public class TeleportCommand extends Command {
 
 	@Argument

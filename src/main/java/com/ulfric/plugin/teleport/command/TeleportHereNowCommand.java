@@ -7,7 +7,7 @@ import com.ulfric.plugin.teleport.TeleportService;
 
 @Name("now")
 @Alias("force")
-@Permission("teleport.here.now")
+@Permission("teleport-here-now")
 public class TeleportHereNowCommand extends TeleportHereCommand {
 
 	@Override
